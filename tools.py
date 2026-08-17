@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv(override=True)
 
 ntfy_url = "https://ntfy.sh/"
-topic_name = "QORDfzmmpqGnElQ0"
+topic_name = "QORDfzmmpqGnElQ0" #"uaGQQucSSPRPwQ0w" 
 
 def push(message, tagType = "bell"):
     print(f"Push: {message}")
