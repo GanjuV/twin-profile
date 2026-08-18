@@ -5,7 +5,7 @@ from agents import function_tool
 load_dotenv(override=True)
 
 ntfy_url = "https://ntfy.sh/"
-topic_name = "uaGQQucSSPRPwQ0w" #"QORDfzmmpqGnElQ0"
+topic_name =  "QORDfzmmpqGnElQ0"#"uaGQQucSSPRPwQ0w"
 
 def push(message, tagType = "bell"):
     print(f"Push: {message}")
