@@ -9,4 +9,9 @@ dependencies = [
     "pypdf",
     "openai",
     "python-dotenv",
+    "openai-agents>=0.19.2",
 ]
+
+[[tool.uv.index]]
+url = "https://pypi.apple.com/simple"
+default = true
