@@ -5,7 +5,7 @@ from agents import function_tool
 load_dotenv(override=True)
 
 ntfy_url = "https://ntfy.sh/"
-topic_name =  "QORDfzmmpqGnElQ0"#"uaGQQucSSPRPwQ0w"
+topic_name = "QORDfzmmpqGnElQ0" #"QORDfzmmpqGnElQ0"
 
 def push(message, tagType = "bell"):
     print(f"Push: {message}")
@@ -16,14 +16,15 @@ def push(message, tagType = "bell"):
         "message": message,
         "title": "Notification",
         "priority": 4,
-        "tags": [tagType]
+        "tags": [tagType],
+        "markdown": True
     }
 )
 
 @function_tool
 def record_user_details(email: str, name: str = "Name not provided", notes: str = "not provided") -> str:
     """ Use this tool to record that a user is interested in being in touch and provided an email address """
-    push(f"Recording interest from {name} with email {email} and notes {notes}")
+    push(f"Recording interest from **{name}** with email **{email}** and notes {notes}")
     return f"Recorded details for {email}"
 
 
